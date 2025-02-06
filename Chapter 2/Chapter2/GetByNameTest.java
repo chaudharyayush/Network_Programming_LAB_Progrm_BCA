@@ -1,6 +1,6 @@
 package Chapter2;
 
-import java.net.InetAddress; 
+import java.net.InetAddress; //imports the InetAddress class from the java.net package, which is used to work with IP addresses and hostnames in Java
 public class GetByNameTest {
 	
 	public static void main(String[] args){

@@ -8,12 +8,14 @@ public class TestRechability {
         
         try {
             // Check if Google is reachable with a timeout of 5 seconds
-            boolean isGoogleReachable = InetAddress.getByName("www.esewa.com").isReachable(5000);
+            boolean isGoogleReachable = InetAddress.getByName("www.google.com").isReachable(5000);
             System.out.println("Is Google reachable? " + isGoogleReachable);
             
-            // Check if localhost is reachable with a custom TTL and timeout
-            boolean isLocalhostReachable = InetAddress.getByName("google.com").isReachable(null, 1, 10);
-            System.out.println("Is localhost reachable? " + isLocalhostReachable);
+            // Check if host is reachable with a custom TTL and timeout
+            boolean ishostReachable = InetAddress.getByName("google.com").isReachable(null, 0, 1000);//null: No custom network interface is specified (default network interface is used).
+            //1: TTL (Time To Live) value, which limits how far packets can travel.
+            //10: Timeout in milliseconds for the reachability check.
+            System.out.println("Is host reachable? " + ishostReachable);
         } catch (Exception e) {
             e.printStackTrace();
         }

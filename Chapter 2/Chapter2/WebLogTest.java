@@ -14,13 +14,13 @@ public class WebLogTest {
 		// System.out.println("Current working directory: " +
 		// System.getProperty("user.dir"));
 
-		try (FileInputStream fin = new FileInputStream(file);
-				Reader in = new InputStreamReader(fin);
-				BufferedReader bin = new BufferedReader(in)) {
+		try (FileInputStream fin = new FileInputStream(file);//Opens the file for reading as a stream of bytes.
+				Reader in = new InputStreamReader(fin);//Converts the byte stream (fin) into a character stream.
+				BufferedReader bin = new BufferedReader(in)) {  //Buffers the character stream (in) to enable efficient reading of lines.
 
 			for (String entry = bin.readLine(); entry != null; entry = bin.readLine()) {
 				// Separate out the IP address
-				int index = entry.indexOf(' '); // position of the first space
+				int index = entry.indexOf(' '); // Finds the position of the first space in the line, used to separate the IP address	
 				if (index == -1) {
 					System.out.println("Invalid log entry: " + entry);
 					continue;
