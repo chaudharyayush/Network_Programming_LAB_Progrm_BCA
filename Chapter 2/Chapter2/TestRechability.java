@@ -8,7 +8,7 @@ public class TestRechability {
         
         try {
             // Check if Google is reachable with a timeout of 5 seconds
-            boolean isGoogleReachable = InetAddress.getByName("www.google.com").isReachable(5000);
+            boolean isGoogleReachable = InetAddress.getByName("www.facebook.com").isReachable(5000);
             System.out.println("Is Google reachable? " + isGoogleReachable);
             
             // Check if host is reachable with a custom TTL and timeout
