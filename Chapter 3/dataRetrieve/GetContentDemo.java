@@ -14,7 +14,7 @@ public class GetContentDemo {
 			Object o = url.getContent();
 			
 			System.out.println("The response type is : "+responseType);  
-			// System.out.print(o);
+			//System.out.print(o);
 			System.out.print(o.getClass().getName());
 		} catch (IOException e) {
 			System.out.println(e);

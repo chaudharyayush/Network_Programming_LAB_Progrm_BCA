@@ -10,6 +10,7 @@ public class UrlEncoderDecoderExample {
          String url = "https://www.example.com/search?q=query string";
 
          // Encode the URL
+         //UTF-8 (Unicode Transformation Format - 8-bit) is a variable-width character encoding that is used to represent Unicode characters
          String encodedUrl = URLEncoder.encode(url, "UTF-8");
 
          // Print the encoded URL

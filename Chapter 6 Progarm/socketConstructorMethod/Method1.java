@@ -15,13 +15,26 @@ public class Method1 {
             // Create a socket and connect to the server
             Socket socket = new Socket(hostAddress, portNumber);
             
-            // Now you can use the socket for communication
+            // It retrieves the output stream from the socket object to send data to the server
             OutputStream outputStream = socket.getOutputStream();
+            
+            //Wraps the OutputStream inside a PrintWriter for easier text-based communication
+            //The second argument true enables auto-flushing
             PrintWriter writer = new PrintWriter(outputStream, true);
+            
+            //println() automatically handles newline characters
             writer.println("GET / HTTP/1.1");
+            
+			/*
+			 * Sends the Host header required in HTTP 1.1 to tells the server which website
+			 * we are trying to reach In HTTP 1.1, a single server/IP can host multiple
+			 * websites (Virtual Hosting) so The Host header tells the server which specific website we want.
+			 */
             writer.println("Host: " + hostName);
+            
+            //Sends a blank line to indicate the end of the HTTP request
             writer.println();
-            writer.flush();
+            //writer.flush();
             
             // Read response from the server
             InputStream inputStream = socket.getInputStream();

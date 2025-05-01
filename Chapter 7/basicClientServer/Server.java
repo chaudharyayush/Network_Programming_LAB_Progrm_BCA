@@ -5,7 +5,7 @@ import java.net.*;
 public class Server{
 	
     public static void main(String[] args) throws IOException {
-        ServerSocket ss = new ServerSocket(13001);
+        ServerSocket ss = new ServerSocket(7000);
        
         
         System.out.println("Waiting for connections....");

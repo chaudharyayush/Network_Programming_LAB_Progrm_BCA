@@ -3,12 +3,17 @@ package multiThreadedPooled;
 import java.net.Socket;
 import java.io.*;
 
+//This class extends Thread and is responsible for handling an individual client connection
 public class ClientHandlerThread extends Thread{
-    private final Socket connection;
+	//Stores the client's socket connection
+	private final Socket connection;
+	
+	//Receives the client socket when a new instance of ClientHandlerThread is created
     public ClientHandlerThread(Socket socket) {
-        this.connection = socket;
+        this.connection = socket;//Stores the socket in connection for further processing
     }
 
+    // overrides the run() method of Thread, making the class executable as a separate thread
     @Override
     public void run() {
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));

@@ -1,13 +1,16 @@
 package chapter3;
 
-import java.net.Authenticator;
-import java.net.PasswordAuthentication;
+import java.net.Authenticator; //A class used for managing authentication requests
+import java.net.PasswordAuthentication; //Stores username and password credentials
 import java.net.URL;
 import java.net.URLConnection;
 import java.io.*;
 
 public class AuthnticatorClass extends Authenticator {
     @Override
+    //@Override indicates that this method overrides the getPasswordAuthentication() method from the Authenticator class
+    
+    //This method is called automatically when authentication is required
     protected PasswordAuthentication getPasswordAuthentication() {
         // Prompt the user for a username and password
         String username = "03268048";

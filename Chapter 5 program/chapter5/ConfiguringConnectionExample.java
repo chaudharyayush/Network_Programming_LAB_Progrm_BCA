@@ -16,7 +16,7 @@ public class ConfiguringConnectionExample {
 			System.out.println("URL: " + connection.getURL());
 			System.out.println("Allow User Interaction: " + connection.getAllowUserInteraction());
 			System.out.println("Do Output: " + connection.getDoOutput());
-			System.out.println("Use Cache: " + connection.getUseCaches());
+			System.out.println("Use Cache: " + connection.getUseCaches() +"\n");
 
 			// Configure the URLConnection
 			connection.setAllowUserInteraction(true);
@@ -24,6 +24,7 @@ public class ConfiguringConnectionExample {
 			connection.setUseCaches(false);
 
 			// Get and print the configuration of the URLConnection
+			System.out.println("After Configuration \n");
 			System.out.println("Allow User Interaction: " + connection.getAllowUserInteraction());
 			System.out.println("Do Output: " + connection.getDoOutput());
 			System.out.println("Use Cache: " + connection.getUseCaches());

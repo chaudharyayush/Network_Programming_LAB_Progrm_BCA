@@ -6,7 +6,7 @@ import java.util.*;
 public class Client {
     public static void main(String[] args) throws IOException {
 
-        Socket ss = new Socket("localhost", 13001);
+        Socket ss = new Socket("localhost", 7000);
         System.out.println("connected...");
         
         // read something to send to the server

@@ -22,7 +22,7 @@ public class Method2 {
             writer.println("GET / HTTP/1.1");
             writer.println("Host: " + remoteHost);
             writer.println();
-            writer.flush();
+//            writer.flush();
             
             // Read response from the server
             InputStream inputStream = socket.getInputStream();

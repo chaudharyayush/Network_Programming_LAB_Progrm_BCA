@@ -13,8 +13,9 @@ public class UriCreationMethod1
      // Constructor to create a new URI
      // by parsing the string
      URI uriBase = new URI(uribase);
+     System.out.println(uriBase);
 
-     // create() method
+     // Creates a new URI object (uri) using the URI.create() method
      URI uri = URI.create(str);
      System.out.println(uri);
        
